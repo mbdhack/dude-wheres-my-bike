@@ -3,7 +3,7 @@ app:
   # HTML Title
   title: Dude Where's My Bike?
   # Header name
-  name: Dude Where's My Bike?
+  name: DUDE WHERE'S MY BIKE?
   # Meta description that will show up in Google search results
   meta_description: _(A map to share user-reported locations of bike thefts in Miami, Florida)
 
@@ -20,7 +20,7 @@ map:
     maxZoom: 17
   base_layer:
     url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
-    attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+    attribution: 'Developed by <a href="Code for Miami, " target="_blank">Code for Miami</a>'
   layers: []
 
 # The keys show up in the dropdown list when you are adding a new place
@@ -145,17 +145,11 @@ survey:
       type: text
       name: submitter_name
 
-support:
-  submission_type: support
-  submit_btn_text: _(Support This!)
-  action_text: supported
-  anonymous_name: _(Someone)
-
 pages:
   - title: _(About)
     slug: about
     name: overview
-    start_page: true
+    start_page: false
 
   - title: _(The Miami Bike Scene)
     external: true

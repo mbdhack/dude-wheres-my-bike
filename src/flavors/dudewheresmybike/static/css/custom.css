@@ -12,6 +12,12 @@ body, select, input, textarea {
 /*  font-family: "Comic Sans MS", cursive, sans-serif;*/
 }
 
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+}
 
 /* =Links
 -------------------------------------------------------------- */
@@ -29,8 +35,8 @@ a:hover {
 -------------------------------------------------------------- */
 
 #site-header {
-/*  color: #fff;*/
-/*  background-color: #994c99;*/
+ color: #fff;
+ background-color: #000;
 }
 
 #site-header a, #site-header a:active, #site-header a:visited {
@@ -50,7 +56,8 @@ a:hover {
  * as to not break it scaling via media queries. */
 
 #site-title {
-/*  font-family: Impact, sans-serif;*/
+    font-family: 'Oswald', Helvetica, sans-serif; 
+    text-transform: uppercase;
 /*  color: #fff;*/
 /*  text-shadow: none;*/
 }
@@ -112,13 +119,15 @@ a#nav-bttn:hover {
 -------------------------------------------------------------- */
 
 a.add-place {
-/*  background-color: #ff40ff;*/
+background-color: #000;
 /*  color: #eee;*/
 /*  text-shadow: none;*/
+  font-family: 'Oswald', Helvetica, sans-serif;
+  text-shadow: none;
 }
 
 a.add-place:hover {
-/*  background-color: #e500e5;*/
+background-color: #138BC4;
 /*  color: #fff;*/
 }
 
@@ -230,7 +239,7 @@ a.reply-link:hover {
 -------------------------------------------------------------- */
 
 #ticker {
-/*  background-color: #806080;*/
+  background-color: #222222;
 }
 
 ul.recent-points {
@@ -251,7 +260,7 @@ ul.recent-points {
 
 .recent-points li:hover a,
 .recent-points a:hover {
-/*  color: #fff;*/
+  color: #a3c7d9;
 }
 
 /* =Zendesk
@@ -305,4 +314,14 @@ ul.recent-points {
 }
 
 @media only screen and (min-width: 1300px) {
+}
+
+
+.support{
+  display: none;
+}
+
+.promotion{
+  border: none;
+  background: none;
 }
