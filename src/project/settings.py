@@ -140,27 +140,33 @@ INSTALLED_APPS = (
 TEST_RUNNER = 'sa_web.test_runner.DatabaselessTestSuiteRunner'
 
 # Shareabouts flavor config
+# SHAREABOUTS = {
+#     'FLAVOR': 'default_config',
+#     # The name of the flavor. Optional, but useful for using the default settings.
+
+#     'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/datasets/demo-user/demo-data/',
+#     # The root URL of the dataset API
+
+#     'DATASET_KEY': 'abc123',
+#     # The API key for writing to the dataset.  You must set this in order to be
+#     # able to write to the dataset
+
+
+#   # 'CONFIG': '...',
+#     # The path to the config file for the flavor. By default, this is a file
+#     # called 'config.yml' in a project folder called 'flavors/<name>/'
+
+#   # 'PACKAGE': '...',
+#     # The django app package for the flavor.  By default, this is
+#     # 'flavors.<name>'
+
+#   # 'CONTEXT': {},
+#     # Additional values to make available in the template context
+# }
 SHAREABOUTS = {
-    'FLAVOR': 'default_config',
-    # The name of the flavor. Optional, but useful for using the default settings.
-
-    'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/datasets/demo-user/demo-data/',
-    # The root URL of the dataset API
-
-    'DATASET_KEY': 'abc123',
-    # The API key for writing to the dataset.  You must set this in order to be
-    # able to write to the dataset
-
-  # 'CONFIG': '...',
-    # The path to the config file for the flavor. By default, this is a file
-    # called 'config.yml' in a project folder called 'flavors/<name>/'
-
-  # 'PACKAGE': '...',
-    # The django app package for the flavor.  By default, this is
-    # 'flavors.<name>'
-
-  # 'CONTEXT': {},
-    # Additional values to make available in the template context
+  'FLAVOR': 'dudewheresmybike',
+  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/codeformiami/datasets/dwmb/',
+  'DATASET_KEY': 'NWQyMGE2MDljZDBjOTI4ZTViNTZhNDEz',
 }
 
 # A sample logging configuration. The only tangible logging

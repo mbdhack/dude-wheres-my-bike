@@ -15,7 +15,7 @@ map:
     center:
       lat: 25.95
       lng: -80.2984
-    zoom: 11
+    zoom: 10
     minZoom: 10
     maxZoom: 17
   base_layer:
@@ -26,10 +26,15 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    default: blue
-    focused: red
+  theft: 
+    default: blue-dot
+    focused: blue-pin
     label: _(theft)
+
+  # landmark:
+  #   default: blue
+  #   focused: red
+  #   label: _(theft)
   # park:
   #   default: blue
   #   focused: red
@@ -42,16 +47,16 @@ place_types:
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
 place_type_icons:
-  blue:
-    iconUrl: /static/css/images/feature-point.png
+  blue-dot:
+    iconUrl: /static/css/images/markers/dot-0d85e9.png
     iconSize:
       width: 17
       height: 18
     iconAnchor:
       x: 9
       y: 9
-  red:
-    iconUrl: /static/css/images/marker-focused.png
+  blue-pin:
+    iconUrl: /static/css/images/markers/marker-0d85e9.png
     shadowUrl: /static/css/images/marker-shadow.png
     iconSize:
       width: 25
@@ -72,55 +77,63 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Report a Theft)
+  add_button_label: _(Report a theft)
   action_text: _(reported)
-  title: _(Help us help you)
+  title: _(Report a stolen bike)
   action_text: _(reported)
   anonymous_name: _(Someone)
   submit_button_label: _(Report)
   items:
-    - prompt: _(Location Name)
-      type: text
-      name: name
-      attrs:
-        - key: placeholder
-          value: _(Location Name)
-        - key: size
-          value: 30
     - prompt: _(Location Type)
       type: select
       options:
         - label: _(Theft)
           value: theft
-        # - label: _(Park)
-        #   value: park
-        # - label: _(School)
-        #   value: school
+        - label: _(Landmark)
+          value: landmark
       name: location_type
-    - prompt: _(Image)
-      inputfile_label: _(Add an Image)
-      type: file
-      name: my_image
-      optional: true
+    - prompt: _(Where did it happen?)
+      type: text
+      name: name
       attrs:
-        - key: accept
-          value: image/*
-    - prompt: _(Your Name)
+        - key: placeholder
+          value: _(Address, intersection, or other geographical description)
+        - key: size
+          value: 30
+      name: name
+    - prompt: _(Your name)
       type: text
       name: submitter_name
       optional: true
       attrs:
         - key: placeholder
-          value: _(Name)
+          value: _(First, last)
         - key: size
           value: 30
-    - prompt: _(Ok, what happened?)
+    - prompt : _(Your email)
+      type: text
+      name: submitter_email
+      optional: true
+      attrs:
+         - key: placeholder
+           value: _(No one sees it, just us.)
+         - key: size
+           value: 30
+    - prompt: _(Got a photo?)
+      inputfile_label: _(Add a photo)
+      type: file
+      name: image
+      optional: true
+      attrs:
+        - key: accept
+          value: image/*
+    - prompt: _(Anything else you can tell us?)
       type: textarea
       name: description
       optional: true
       attrs:
         - key: placeholder
-          value: _(Description...)
+          value: _(e.g. What make, model, color was it, when was it last seen, what you were doing before it happened, best way to contact you)
 
 survey:
   submission_type: comments

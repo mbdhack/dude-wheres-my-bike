@@ -10,7 +10,8 @@ TEMPLATE_DEBUG = DEBUG
 
 SHAREABOUTS = {
   'FLAVOR': 'dudewheresmybike',
-  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/codeformiami/datasets/dwmb',
+  #'FLAVOR': 'default_config',
+  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/codeformiami/datasets/dwmb/',
   'DATASET_KEY': 'NWQyMGE2MDljZDBjOTI4ZTViNTZhNDEz',
 }
 

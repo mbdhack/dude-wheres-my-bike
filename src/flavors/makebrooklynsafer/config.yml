@@ -105,13 +105,12 @@ place:
       attrs:
         - key: placeholder
           value: Give us a brief description of the problem or place, and the approximate time and day when you pass by here.
-    - prompt: Location Type
+    - prompt: _(Location Type)
       type: select
-      options:
-        - Unsafe Intersection
-        - Safe Intersection
       name: location_type
-
+      options:
+        - label: _(Theft)
+          value: theft
     - prompt: Traffic Does Not Yield
       type: checkbox
       optional: true

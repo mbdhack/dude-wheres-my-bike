@@ -325,3 +325,7 @@ ul.recent-points {
   border: none;
   background: none;
 }
+
+label[for=place-location_type], select#place-location_type{
+  display: none;
+}
